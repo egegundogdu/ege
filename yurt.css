@@ -71,15 +71,10 @@ body {
     text-align: center;
     align-items: center;
 }
-
-.navbar span {
-    color: #4684e9;
-}
-
 .navbar h1 {
     font-size: 40px;
     color: #4684e9;
-    font-weight:bold;
+    
     margin-top: 30px;
 
 }
