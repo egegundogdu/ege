@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+
+}
+
+.navbar {
+    position: fixed;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    z-index: 101;
+    background-color: white;
+    border: 2px solid black;
+
+
+
+
+
+}
+
+.telefonlar {
+    text-decoration: none;
+    color: black;
+
+}
+
+.telefonlar:hover {
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.enust {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #f8a971;
+    position: fixed;
+    z-index: 102;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#enenust {
+    text-align: center;
+    font-weight: 600;
+
+}
+
+#telefon {
+    align-items: center;
+    text-align: center;
+
+}
+
+#fax {
+    text-align: center;
+    align-items: center;
+}
+
+.navbar span {
+    color: #4684e9;
+}
+
+.navbar h1 {
+    font-size: 40px;
+    color: #4684e9;
+    margin-left: 50px;
+    margin-top: 30px;
+
+}
+
+.navbar .nav-links ul {
+    display: flex;
+
+}
+
+.navbar .nav-links ul li {
+    margin: 0 1px;
+    font-size: 22px;
+    color: #4684e9;
+    margin-right: 50px;
+    margin-top: 45px;
+}
+
+.navbar .nav-links ul li a {
+    color: #4684e9;
+
+    font-weight: 500;
+}
+
+.navbar .nav-links ul li a:hover {
+    color: #f8a971;
+    transition: 0.3s;
+    text-decoration: none;
+
+}
+
+.navbar .menu-hamburger {
+    width: 35px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    display: none;
+}
+
+.anaresim {
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+
+}
+
+.hakkımızda {
+    width: 100%;
+    margin-top: 100px;
+
+
+
+
+}
+
+.hakkımızda h2 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 10px;
+    color: #4684e9;
+
+
+}
+
+.bro2 {
+    text-align: justify;
+    font-size: 18px;
+    margin: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 70px;
+    color: black;
+
+
+}
+
+.container {
+    position: relative;
+    min-height: 70vh;
+
+    margin-top: 100px;
+
+}
+
+.container h1 {
+    font-size: 50px;
+    color: #4684e9;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.container .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.container .image-container .image {
+    height: 250px;
+    width: 350px;
+    border: 7px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.container .image-container .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+
+.container .image-container .image:hover img {
+    transform: scale(1.1);
+}
+
+.container .popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.container .popup-image span {
+    position: absolute;
+    top: 80px;
+    right: 40px;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+
+
+}
+
+.container .popup-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+    height: 750px;
+}
+
+#foto {
+    color: #f8a971;
+}
+
+.harita {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: -80px;
+
+
+}
+
+.zzz {
+    margin: 30px;
+    margin-top: 80px;
+
+
+}
+
+
+#yer {
+    margin-left: 36%;
+    margin-top: 30px;
+    font-size: 35px;
+    color: #4684e9;
+
+}
+
+#ilet {
+    font-size: 35px;
+    color: #39b5d3;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 300px 300px 200px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 50px;
+
+}
+
+.kart1 {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.hizmetlerimiz {
+    width: 100%;
+    text-align: center;
+    color: #4684e9;
+    font-size: 45px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+.cizgi {
+    background-color: #f8a971;
+    width: 100%;
+    height: 2px;
+    margin-top: 70px;
+}
+
+.footer {
+    background-color: #f1f1ef;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.butonlar {
+    margin-left: 18%;
+    margin-top: 30px;
+
+}
+
+.footer .butonlar ul li {
+    font-size: 22px;
+    margin: 7px;
+    padding: 5px;
+
+}
+
+.footer .butonlar ul li a {
+    color: #f8a971;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer .butonlar ul li a:hover {
+    color: #4684e9;
+    transition: 0.5s;
+}
+
+.adres {
+    margin-right: 18%;
+    font-size: 20px;
+    color: #4684e9;
+
+
+}
+
+.card-title {
+    color: #4684e9;
+}
+
+.hakkimizdaalti {
+    background-color: #f8a971;
+    width: 100%;
+    height: 1px;
+    margin-top: 150px;
+
+
+}
+
+.carousel-caption {
+    margin-bottom: 400px;
+
+    color: #34421e;
+}
+
+.cizgi1 {
+    width: 100%;
+    height: 2px;
+    background-color: #f8a971;
+    margin-top: 150px;
+
+}
+.showoff{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.hakkimizdaust{
+    width: 100%;
+    height: 1px;
+    background-color: #f8a971;
+    margin-top: 50px;
+}
+
+
+
+@media screen and (max-width: 1280px) {
+    .navbar {
+        padding: 0;
+
+        position: absolute;
+        background-color: white;
+
+
+    }
+
+    .footer .butonlar {
+        margin-right: 80px;
+
+    }
+
+
+
+
+    .navbar .menu-hamburger {
+        display: block;
+        margin-right: -20px;
+        font-size: 30px;
+        margin-top: -10px;
+    }
+
+    .anaresim {
+        height: 400px;
+    }
+
+
+    .nav-links {
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 350px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur (8px);
+        margin-left: -100%;
+
+
+    }
+
+    .card {
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+    }
+
+    .navbar h1 {
+        font-size: 30px;
+        margin-top: 35px;
+    }
+
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links ul li {
+        margin: 25 0px;
+        font-size: 1.6em;
+
+        margin-left: 90px;
+
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: -10px;
+        left: 50px;
+
+    }
+
+}
+
+@media (max-width:768px) {
+    .container .popup-image img {
+        width: 95%;
+    }
+
+}

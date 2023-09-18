@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ege Erkek Öğrenci Yurdu</title>
+    <link rel="stylesheet" href="yurt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+
+
+
+.container{
+    position: relative;
+    min-height: 70vh;
+    
+    margin-top: 100px;
+    
+}
+.container h1{
+    font-size: 50px;
+    color: #4684e9;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+.container .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 10px;
+}
+.container .image-container .image{
+    height: 250px;
+    width: 350px;
+    border: 7px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .8);
+    overflow: hidden;
+    cursor: pointer;
+    
+}
+.container .image-container .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.container .image-container .image:hover img{
+    transform: scale(1.1);
+}
+.container .popup-image{
+    position: fixed;
+    top: 0; left: 0;
+    background: rgba(0, 0, 0, .9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.container .popup-image span{
+    position: absolute;
+    top: 80px; right: 40px;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+
+
+}
+.container .popup-image img{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50% , -50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+    height: 750px;
+}
+#foto{
+    color: #4684e9;
+    margin-top: 200px;
+    font-size: 70px;
+}
+.navbar{
+    position: absolute;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    z-index: 101;
+    background-color: white;
+    top: 0;
+    border: 2px solid  black;
+}
+.telefonlar{
+    text-decoration: none;
+    color: black;
+
+}
+.telefonlar:hover{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.enust{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #f8a971;
+    position: fixed;
+    z-index: 102;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    
+}
+#enenust{
+    text-align: center;
+    font-weight: 500;
+
+}
+
+#telefon{
+    align-items: center;
+    text-align: center;
+}
+#fax{
+    text-align: center;
+    align-items: center;
+}
+
+.navbar span{
+    color: #4684e9;
+}
+.navbar h1{
+   font-size: 40px;
+   color: #4684e9;
+   margin-left: 50px;
+   margin-top: 30px;
+   
+}
+.navbar .nav-links ul{
+    display: flex;
+    
+}
+
+.navbar .nav-links ul li{
+    margin: 0 1px;
+    font-size: 22px;
+    color: black;
+    margin-right: 50px;
+    margin-top: 45px;
+}
+.navbar .nav-links ul li a{
+    color: #4684e9;
+    
+    font-weight: 400;
+}
+.navbar .nav-links ul li a:hover{
+    color: #f8a971;
+    transition: 0.3s;
+    text-decoration: none;
+    
+}
+.cizgi{
+    background-color: #f8a971;
+    width: 100%;
+    height: 2px;
+    margin-top: 70px;
+}
+.footer{
+    background-color: #f1f1ef;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+ .butonlar{
+    margin-left: 18%;
+    margin-top: 30px;
+    
+}
+.footer .butonlar ul li{
+    font-size: 22px;
+    margin: 7px;
+    padding: 5px;
+    
+}
+.footer .butonlar ul li a{
+    color: #f8a971;
+    text-decoration: none;
+    font-weight: bold;
+}
+.footer .butonlar ul li a:hover{
+    color: #4684e9;
+}
+.adres{
+    margin-right: 18%;
+    font-size: 20px;
+    color: #4684e9;
+    
+    
+}
+
+.navbar .menu-hamburger{
+   width: 35px; 
+   position: absolute;
+   top: 50px;
+   right: 50px;
+   display: none;
+}
+@media screen and (max-width: 1280px) {
+    .navbar{
+        padding: 0;
+        background-color: white;
+        position: absolute;
+        height: 100px;
+        
+    }
+    .navbar .menu-hamburger{
+        display: block;
+        margin-right: -20px;
+        font-size: 30px;
+        margin-top: -10px;
+        
+    }
+    .anaresim{
+        height: 400px;
+    }
+    
+   
+    .nav-links{
+        position: absolute;
+        background-color: white;
+        width: 100%;
+        height: 350px;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content:center ;
+        align-items: center;
+        backdrop-filter: blur (8px);
+        margin-left: -100%;
+        
+        
+        
+    }
+    .card{
+        margin-left: 20px;
+    margin-right: 20px;
+   
+    
+    }
+   
+    .navbar h1{
+        font-size: 30px;
+        margin-top: 35px;
+    }
+    .nav-links.mobile-menu{
+        margin-left: 0;
+    }
+    .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar .nav-links ul li{
+        margin: 25 0px;
+        font-size: 1.6em;
+        
+        
+        margin-left: 90px;
+
+}
+.navbar .logo{
+   position: absolute;
+   top: -10px;
+   left: 50px;
+
+}
+
+}
+
+
+</style>
+    </head>
+
+
+<body>
+    
+    <div class="enust">
+        <div id="enenust">Ege  Öğrenci Yurdu</div>
+        <div id="telefon"><i class="fa-solid fa-phone"> </i> <a class="telefonlar" href="tel:+905058398364"> +90 505 839
+                83 64</a></div>
+        <div id="fax"><i class="fa-solid fa-print"></i> <a class="telefonlar" href="tel:+902565128066">+90 256 512 80
+                66</a> </div>
+
+    </div>
+
+    <nav class="navbar">
+        <h1><span>Ege</span> Erkek Öğrenci Yurdu</h1>
+
+        <div class="nav-links">
+            <ul>
+                <li><a href="yurt.html">Ana Sayfa</a></li>
+                <li><a href="hakkımızda.html">Hakkımızda</a></li>
+                
+                <li><a href="galeri.html">Foto Galeri</a></li>
+                <li><a href="yerimiz.html">Yerimiz</a></li>
+            </ul>
+        </div>
+        <div class="menu-hamburger">
+            <i class="fa-solid fa-bars" style="height: 40px; width: 40px;"></i>
+        </div>
+
+    </nav>
+
+
+    <div class="container">
+        <h1 id="foto">Foto galeri
+        </h1>
+
+        <div class="image-container">
+            <div class="image"><img src="yazilim resimleri/foto1.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto2.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto3.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto4gercek.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto5.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto6.png" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto10.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto11.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/foto12.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/galery.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/galery2.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/galery3.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/galery4.jpg" alt=""></div>
+            <div class="image"><img src="yazilim resimleri/galery5.jpg" alt=""></div>
+
+
+        </div>
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="yazilim resimleri/foto1.png" alt="">
+        </div>
+    </div>
+    <div class="cizgi">
+
+
+
+    </div>
+
+
+    <div class="footer">
+        <div class="butonlar">
+           <ul>
+            <li><a href="yurt.html">Ana Sayfa</a></li>
+            <li><a href="hakkımızda.html">Hakkımızda</a></li>
+            
+            <li><a href="galeri.html">Foto Galeri</a></li>
+            <li><a href="yerimiz.html">Yerimiz</a></li>
+           </ul>
+    
+        </div>
+      
+        <div class="adres">Konak Mh. Yildirim Sk No:10/A Söke- Aydin <br>0(256) 512 80 66 - 0(505) 839 83 64 <br> 0(256) 512 80 66 <br> egekizyurdu74g@gmail.com</div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.querySelectorAll('.image-container img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+            }
+        });
+
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+
+        }
+
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+        <script>
+            const menuHamburger = document.querySelector(".menu-hamburger")
+            const navLinks = document.querySelector(".nav-links")
+        
+            menuHamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-menu')
+            })
+        
+        
+        
+        </script>
+
+</body>
+
+</html>
