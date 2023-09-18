@@ -45,7 +45,7 @@ body {
 .enust {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     background-color: #f8a971;
     position: fixed;
     z-index: 102;
@@ -251,11 +251,14 @@ body {
 }
 
 .zzz {
-    margin: 30px;
-    margin-top: 80px;
-
-
+    width: 100%;
+    align-items: center;
 }
+iframe {
+    width: 100%;
+    height: 600px;
+}
+
 
 
 #yer {
